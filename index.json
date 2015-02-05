@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Wordpress Themes",
+    "list": [
+      {
+        "name": "Boxks Simple V2",
+        "alias": "boxks_simple_v2",
+        "path": "WordpressThemes/boxks_simple_v2.json"
+      }
+    ]
+  }
+]

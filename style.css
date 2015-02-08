@@ -141,10 +141,6 @@ header ul, header li,nav ol, menu ol, menu ul,menu li, .list, .list li, .main-bo
 	margin: 0px;
 	padding: 0px;
 }
-.commentlist, .commentlist li{
-	list-style: none;
-	list-style-type: none;
-}
 menu, nav,form {
 	padding: 0;
 	margin: 0;
@@ -388,6 +384,17 @@ header {
 }
 .post>ul, .post>ol {
 	margin: 1em 0;
+}
+.error {
+	margin: 1em auto ;
+	float: none;
+	border: 1px solid #FFCF00;
+	color: #FFCF00;
+	border-radius: 4px;
+	padding: 2em;
+	font-size: 2em;
+	box-shadow: 8px 8px 0 #FFFDF1;
+	box-sizing: border-box;
 }
 /* Main end */
 /* 980 */

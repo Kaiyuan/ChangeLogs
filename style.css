@@ -14,6 +14,7 @@
 html, html>body {
 	margin: 0px;
 	padding: 0px;
+	min-height: 100%;
 }
 body {
 	font-family: 'museo-slab', "Helvetica Neue", Ubuntu, "WenQuanYi Micro Hei", Helvetica,"Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", Arial, sans-serif;
@@ -170,7 +171,7 @@ header, footer, .center {
 }
 .pof {position: fixed;}
 .por, select {position: relative;}
-.poa {position: absolute;}
+.poa, .icon-box::after, .icon-box::before {position: absolute;}
 .fz12, footer {font-size: 12px !important;}
 .c777, .c777 * {
 	color: #777;
@@ -397,6 +398,71 @@ header {
 	box-sizing: border-box;
 }
 /* Main end */
+#loading {
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+}
+#loading::after {
+	content: '';
+	width: 40px;
+	height: 40px;
+	border: 3px solid #22A4DE;
+	border-color: #a0d6f9 #a0d6f9 #22A4DE #a0d6f9;
+	border-radius: 23px;
+	top: 50%;
+	left: 50%;
+	margin-top: -23px;
+	margin-left: -23px;
+	box-shadow: inset 0 0 0 4px #f2f2f2,0 0 0 4px #f2f2f2;
+	transition: all 1s ;
+	transform-origin: center;
+}
+.loading::after {
+	-webkit-animation: loadingbar 1s infinite linear;
+	-moz-animation: loadingbar 1s infinite linear;
+	-o-animation: loadingbar 1s infinite linear;
+	animation: loadingbar 1s infinite linear;
+}
+@keyframes loadingbar {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-o-keyframes loadingbar {
+  0% {
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-moz-keyframes loadingbar {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@-webkit-keyframes loadingbar {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
 /* 980 */
 @media(max-width:768px) {
 	#Main {

@@ -17,6 +17,7 @@ jQuery(document).ready(function() {
 	var MainBox = $('#Main');	// 内容 DOM
 	var Main = document.getElementById('Main');
 	var indeBn = $('#index-bn');	// 目录按钮
+	var loadBar = $('#loading');
 
 	// 列出 localStorage 内容
 	function listsData () {
@@ -186,6 +187,14 @@ jQuery(document).ready(function() {
 			};
 		}
 	}, false);
+
+	// ajax Loadingbar
+	$(document).ajaxStart(function () {
+		loadBar.addClass('loading').show();
+	})
+	$(document).ajaxStop(function () {
+		loadBar.fadeOut(100).removeClass('loading');
+	})
 
 
 });

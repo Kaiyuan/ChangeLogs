@@ -81,7 +81,6 @@ jQuery(document).ready(function() {
 		// console.log(logPath);
 		$.ajax({
 			url: logPath,
-			cache: false,
 			dataType: 'json',
 			success: function (logData) {
 				logPost += '<ul id="Log-Main" class="main-box-list left100">';

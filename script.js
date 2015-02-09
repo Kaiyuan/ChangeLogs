@@ -190,10 +190,10 @@ jQuery(document).ready(function() {
 
 	// ajax Loadingbar
 	$(document).ajaxStart(function () {
-		loadBar.addClass('loading').show();
+		loadBar.show();
 	})
 	$(document).ajaxStop(function () {
-		loadBar.fadeOut(100).removeClass('loading');
+		loadBar.fadeOut(100);
 	})
 
 

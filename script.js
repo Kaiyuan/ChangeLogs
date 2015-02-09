@@ -129,7 +129,7 @@ jQuery(document).ready(function() {
     // 点击显示日志详情
 	$(document).on('click','.log-header',function(){
 		var thisVer = $(this).parent().index()+1;
-		$('#Log-Main>li:nth-child('+thisVer+')>.post').toggle('fast');
+		$('#Log-Main>li:nth-child('+thisVer+')>.post').slideToggle('fast');
 	});
 
 	// 将 index.json 写入 localStorage
